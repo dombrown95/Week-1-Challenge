@@ -77,11 +77,18 @@ main {
 
 section {
     margin-right: 20px;
-    padding: 50px;
+    padding: 20px; /*adjusting padding to fix background issues*/
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color:#2589bd;
     color: #ffffff;
+    box-sizing: border-box; /*Added to include padding in height calculation*/
+}
+
+main section {
+    width: calc(33.333% - 20px); 
+    display: inline-block;
+    margin-right: 20px; /*adding gap between sections as per example image*/
 }
 
 /* restricting image height to prevent displaying incorrectly> */
